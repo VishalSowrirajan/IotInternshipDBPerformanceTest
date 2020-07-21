@@ -9,10 +9,11 @@ The performance result for **Read** query performance:
 ![ReadPlot](DB Read.png)
 
 The performance result for **Write** query performance:
-![ReadPlot](Write Query.png)
+![WritePlot](Write Query.png)
 
 The performance result for **Read With Condition** query performance:
-![ReadPlot](Read With Condition Query.png)
+![ReadWithConditionPlot](Read With Condition Query.png)
+<img src="Read With Condition Query.png">
 
 Run the following command to install the required dependencies:
 python setup.py install
