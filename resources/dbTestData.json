@@ -1,0 +1,151 @@
+{
+   "mongoDb":{
+      "host":"132.231.173.27",
+      "port":27017,
+      "username":"",
+      "password":"",
+      "databaseName":"mainflux",
+      "collection":"test1",
+      "readWithConditionQuery":[
+         {"acc_x":11}, {"acc_x": 13}, {"acc_x":14}, {"acc_y":15}, {"acc_z":27}, {"acc_z":26},
+        {"acc_z":25}, {"acc_z":18}, {"acc_z":19}, {"acc_z":23}, {"acc_x":31}, {"acc_y":33},
+        {"acc_timestamp":"2018-04-28T15:53:00.000Z"}, {"acc_z":33}, {"acc_z":24}, {"acc_z":25},
+        {"acc_z":13}, {"acc_z":14}, {"acc_z":15}
+      ],
+      "writeQuery":
+         [{
+            "acc_x":"12",
+            "acc_y":"40",
+            "acc_z":"18",
+			"acc_timestamp": "2019-07-28T15:53:00.000Z"
+         }]
+   },
+   "cassandraDb":{
+      "contact_points":["132.231.174.124"],
+      "port":9042,
+      "username":"",
+      "password":"",
+      "keyspace":"thingsboard",
+      "readQuery":[
+         "select * from test1"
+      ],
+      "writeQuery":[
+         "insert into test1(acc_x,acc_y,acc_z,acc_timestamp) values (12,11,20,dateof(now()))"
+      ],
+      "readWithConditionQuery":[
+         "select * from test1 where acc_x = 38 ALLOW FILTERING",
+         "select * from test1 where acc_x = 37 ALLOW FILTERING",
+         "select * from test1 where acc_x = 36 ALLOW FILTERING",
+		 "select * from test1 where acc_x = 35 ALLOW FILTERING",
+		 "select * from test1 where acc_x = 34 ALLOW FILTERING",
+		 "select * from test1 where acc_x = 33 ALLOW FILTERING",
+		 "select * from test1 where acc_x = 32 ALLOW FILTERING",
+		 "select * from test1 where acc_x = 31 ALLOW FILTERING",
+		 "select * from test1 where acc_x = 30 ALLOW FILTERING",
+		 "select * from test1 where acc_y = 29 ALLOW FILTERING",
+		 "select * from test1 where acc_y = 28 ALLOW FILTERING",
+		 "select * from test1 where acc_y = 27 ALLOW FILTERING",
+		 "select * from test1 where acc_y = 26 ALLOW FILTERING",
+		 "select * from test1 where acc_y = 25 ALLOW FILTERING",
+		 "select * from test1 where acc_y = 24 ALLOW FILTERING",
+		 "select * from test1 where acc_y = 23 ALLOW FILTERING",
+		 "select * from test1 where acc_y = 22 ALLOW FILTERING",
+		 "select * from test1 where acc_y = 21 ALLOW FILTERING",
+		 "select * from test1 where acc_y = 36 ALLOW FILTERING",
+		 "select * from test1 where acc_z = 38 ALLOW FILTERING",
+		 "select * from test1 where acc_z = 37 ALLOW FILTERING",
+		 "select * from test1 where acc_z = 36 ALLOW FILTERING",
+		 "select * from test1 where acc_z = 35 ALLOW FILTERING",
+		 "select * from test1 where acc_z = 34 ALLOW FILTERING",
+		 "select * from test1 where acc_z = 33 ALLOW FILTERING",
+		 "select * from test1 where acc_z = 32 ALLOW FILTERING",
+		 "select * from test1 where acc_z = 31 ALLOW FILTERING",
+		 "select * from test1 where acc_z = 30 ALLOW FILTERING",
+		 "select * from test1 where acc_x = 26 ALLOW FILTERING",
+		 "select * from test1 where acc_x = 25 ALLOW FILTERING",
+		 "select * from test1 where acc_x = 24 ALLOW FILTERING"
+
+      ]
+   },
+   "postgresDb":{
+      "host":"132.231.174.124",
+      "port":5432,
+      "username":"postgres",
+      "password":"admin",
+      "databaseName":"thingsboard",
+      "readQuery":[
+         "select * from test1"
+      ],
+      "readWithConditionQuery":[
+         "select * from test1 where acc_x = 20",
+		 "select * from test1 where acc_x = 21",
+		 "select * from test1 where acc_x = 22",
+		 "select * from test1 where acc_x = 23",
+		 "select * from test1 where acc_x = 24",
+		 "select * from test1 where acc_x = 25",
+		 "select * from test1 where acc_x = 26",
+		 "select * from test1 where acc_x = 27",
+		 "select * from test1 where acc_x = 28",
+		 "select * from test1 where acc_x = 29",
+		 "select * from test1 where acc_x = 30",
+		 "select * from test1 where acc_y = 21",
+		 "select * from test1 where acc_y = 22",
+		 "select * from test1 where acc_y = 23",
+		 "select * from test1 where acc_y = 24",
+		 "select * from test1 where acc_y = 25",
+		 "select * from test1 where acc_y = 26",
+		 "select * from test1 where acc_y = 27",
+		 "select * from test1 where acc_y = 28",
+		 "select * from test1 where acc_y = 29",
+		 "select * from test1 where acc_y = 30",
+		 "select * from test1 where acc_z = 30",
+		 "select * from test1 where acc_z = 31",
+		 "select * from test1 where acc_z = 32",
+		 "select * from test1 where acc_z = 33",
+		 "select * from test1 where acc_z = 34",
+		 "select * from test1 where acc_z = 22",
+		 "select * from test1 where acc_z = 3"
+      ],
+      "writeQuery":[
+         "insert into test1(acc_x,acc_y,acc_z,acc_timestamp) values (42,11.8,9.7,current_timestamp)"
+      ]
+   },
+   "influxDb":{
+      "host":"132.231.173.27",
+      "port":8086,
+      "username":"mainflux",
+      "password":"mainflux",
+      "databaseName":"mainflux",
+      "readQuery":"select * from accData",
+      "writeQuery":[
+         {
+            "measurement":"accData",
+            "tags":{
+
+            },
+            "fields":{
+               "acc_x":42,
+               "acc_y":15,
+               "acc_z":22
+            }
+         },
+         {
+            "measurement":"accData",
+            "tags":{
+
+            },
+            "fields":{
+               "acc_x":43,
+               "acc_y":16,
+               "acc_z":23
+            }
+         }
+      ],
+      "readWithConditionQuery":[
+         "select * from accData where acc_x = 42",
+         "select * from accData where acc_x = 43",
+         "select * from accData where acc_x = 44",
+         "select * from accData where acc_y = 11"
+      ]
+   }
+}
