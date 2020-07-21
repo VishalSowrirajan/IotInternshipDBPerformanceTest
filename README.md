@@ -6,14 +6,16 @@ The python script intends to evaluate the performance of the Databases namely Ca
 Postgres DB, Elastic DB and Influx DB.
 
 The performance result for **Read** query performance:
+
 ![ReadPlot](https://github.com/VishalSowrirajan/IotInternshipDBPerformanceTest/blob/master/DB%20Read.PNG)
 
 The performance result for **Write** query performance:
 
-![WritePlot](Write Query.png)
+![WritePlot](https://github.com/VishalSowrirajan/IotInternshipDBPerformanceTest/blob/master/Write%20Query.PNG)
 
 The performance result for **Read With Condition** query performance:
-![ReadWithConditionPlot](Read With Condition Query.png)
+
+![ReadWithConditionPlot](https://github.com/VishalSowrirajan/IotInternshipDBPerformanceTest/blob/master/Read%20With%20Condition%20Query.PNG)
 
 Run the following command to install the required dependencies:
 python setup.py install
