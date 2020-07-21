@@ -6,7 +6,7 @@ The python script intends to evaluate the performance of the Databases namely Ca
 Postgres DB, Elastic DB and Influx DB.
 
 The performance result for **Read** query performance:
-![ReadPlot](DB Read.png)
+![ReadPlot](https://github.com/VishalSowrirajan/IotInternshipDBPerformanceTest/blob/master/DB%20Read.PNG)
 
 The performance result for **Write** query performance:
 
