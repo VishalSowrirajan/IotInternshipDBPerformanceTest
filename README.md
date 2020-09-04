@@ -1,4 +1,4 @@
-***************** WELCOME TO DPSS IOT SENSORS STREAM - DPSS INTERNSHIP 2019 ********************
+*****************DPSS INTERNSHIP 2019 ********************
 
 This project aims to compare three Open source IoT servers based on the performance of Database
 and Communication protocol performance.
